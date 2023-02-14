@@ -21,6 +21,7 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 console.log("**log de pruebas con objetos y matrizes**");
 //podemos declarar un objeto de la siguiente manera, hace inferencia de tipos
 //typeScript
+var salidaTexto = '';
 var entradaTexto = {
     valorTexto: '',
     tecla: '',
@@ -36,6 +37,9 @@ entrada.valorTexto = "andres";
 //utilizando la sintaxis expread
 entrada = __assign(__assign({}, entrada), { tecla: 's' });
 console.log(entrada);
+var cajaText = document.querySelector('pre');
+salidaTexto = "entrada=" + JSON.stringify(entrada, null, 2);
+cajaText.innerHTML = salidaTexto;
 var layout = document.querySelector('#entrada'); //operador de asercion nula, esta expresion no va a ser nula
 var input = document.querySelector('#txtnumero');
 //input.value="555555"

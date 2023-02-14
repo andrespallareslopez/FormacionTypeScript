@@ -5,6 +5,11 @@ console.log("**log de pruebas con objetos y matrizes**")
 //podemos declarar un objeto de la siguiente manera, hace inferencia de tipos
 //typeScript
 
+let salidaTexto: string = ''
+
+
+
+
 let entradaTexto = {
                     valorTexto:'',
                     tecla:'',
@@ -31,6 +36,18 @@ entrada.valorTexto="andres"
 entrada={...entrada,tecla:'s'}
 
 console.log(entrada)
+
+const cajaText= document.querySelector('pre') as HTMLPreElement
+
+salidaTexto = "entrada=" +JSON.stringify(entrada,null,2)
+
+cajaText.innerHTML = salidaTexto
+
+
+
+
+
+
 
 const layout = document.querySelector('#entrada')!   //operador de asercion nula, esta expresion no va a ser nula
 
