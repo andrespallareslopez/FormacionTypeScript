@@ -1,30 +1,4 @@
-//diferentes formas de declarar funciones en typescript y javascript
-var sumarCalc = function (a, b) {
-    return a + b;
-};
-//para este caso podemos poner un number
-var restarCalc = function (a, b) {
-    return a - b;
-};
-function multiplicarCalc(a, b) {
-    return a * b;
-}
-console.log(sumarCalc(5, 5));
-console.log(restarCalc(5, 2));
-console.log(multiplicarCalc(5, 5));
-//Y podemos implementar las funciones asi tambien
-var sumar = function (a, b) {
-    return a + b;
-};
-var restar = function (a, b) {
-    return a - b;
-};
-var multiplicar = function (a, b) {
-    return a * b;
-};
-console.log(sumar(5, 5));
-console.log(restar(5, 2));
-console.log(multiplicar(5, 5));
+//Operador Type, tiene un uso similar a interface
 //podemos definir los eventos del DOM asi como una funcion para luego pasarlo como 
 //parametro asi
 var change = function (e) {
