@@ -9,7 +9,7 @@ let mensaje="prueba typescript con tipado debil o inferencia implicita"   //tipo
 let mensaje1: string ="prueba typescript con tipado fuerte"
 
 //vamos a poner que pueda ser un numero y un string 
-let valor: string | number = 12000
+let valor: string | number = 12000   //union types
 
 
 
