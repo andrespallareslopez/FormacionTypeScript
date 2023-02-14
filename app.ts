@@ -12,15 +12,9 @@ const layout = document.querySelector('#entrada')!   //operador de asercion nula
 console.log("layout")
 console.log(layout.children)
 
-
-
 const botones = document.querySelector('#numeros') as HTMLDivElement
 
-
-
 console.dir(botones.childNodes)
-
-
 
 botones.childNodes.forEach((e) =>{
     console.dir(e)
