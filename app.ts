@@ -1,51 +1,67 @@
 
+//diferentes formas de declarar funciones en typescript y javascript
 
-console.log("**log de pruebas tipado dinamino-Any**")    
-
-//podemos declarar objetos de forma dinamica que admitan cualquier tipo
-
-let salidaTexto: any = ''
-
-
-
-
-let entradaTexto = {
-                    valorTexto:'',
-                    tecla:'',
-                    codigoTecla: 0 }
-
-
-//Podemos declarar las propiedades explicitamente con sus tipos
-
-let entrada : {
-     valorTexto: any,
-     tecla: any,
-     codigoTecla: any
+let sumarCalc = (a: number, b:number) =>{
+   return a+b
 }
 
-//y luego podemos definirlo asi
-entrada={valorTexto:undefined,tecla:444,codigoTecla:0}
+//para este caso podemos poner un number
+let restarCalc = (a: number,b:number): number =>{
+    return a-b
+}
 
-
-//podemos modificar las propiedades de esta manera
-//la tradicional
-entrada.valorTexto=null
-
-//utilizando la sintaxis expread
-entrada={...entrada,tecla:'s'}
-
-console.log(entrada)
-
-const cajaText= document.querySelector('pre') as HTMLPreElement
-
-salidaTexto = "entrada=" +JSON.stringify(entrada,null,2)
-
-cajaText.innerHTML = salidaTexto
+function multiplicarCalc(a:number,b:number):number {
+   return a*b
+}
 
 
 
+console.log(sumarCalc(5,5))
+console.log(restarCalc(5,2))
+console.log(multiplicarCalc(5,5))
+
+//vamos a utilizar el operador type para definir funciones type pero tambien sirve para definir
+//tipos definidos por el usuario que se van a utilizar en clases y otras estructuras
 
 
+
+//definimos la firma de una funcion la instruccion type
+type operador = (a:number,b:number) => number
+
+
+
+//Y podemos implementar las funciones asi tambien
+
+let sumar: operador=(a,b)=>{
+    return a+b
+}
+
+let restar: operador = (a,b) =>{
+    return a-b
+}
+
+let multiplicar: operador = (a,b) =>{
+    return a*b
+}
+
+console.log(sumar(5,5))
+console.log(restar(5,2))
+console.log(multiplicar(5,5))
+
+
+
+
+
+
+//podemos definir los eventos del DOM asi como una funcion para luego pasarlo como 
+//parametro asi
+let change=(e: Event) =>{
+   console.log(e)
+
+}
+let click=(e: Event) =>{
+   console.log("click Event") 
+}
 
 
 const layout = document.querySelector('#entrada')!   //operador de asercion nula, esta expresion no va a ser nula
@@ -53,26 +69,23 @@ const layout = document.querySelector('#entrada')!   //operador de asercion nula
 
 let input = document.querySelector('#txtnumero') as HTMLInputElement
 
-//input.value="555555"
+
 
 input.onchange= (e: Event) =>{
      
-     entrada.valorTexto = input.value
-     console.log(entrada)
+     //entrada.valorTexto = input.value
+     //console.log(entrada)
 
 }
-input.addEventListener('change',(e:Event) =>{
-    //Tambien podemos definir el evento asi
-    
-    
-})
+input.addEventListener('change',change)
+
 
 input.addEventListener('keydown' , (e: KeyboardEvent) =>{
     //console.dir(e.target)
-    entrada.tecla=e.key 
-    entrada={...entrada,codigoTecla:e.keyCode}
+    //entrada.tecla=e.key 
+    //entrada={...entrada,codigoTecla:e.keyCode}
     //console.log(e.key)
-    console.log(entrada)
+    //console.log(entrada)
 
 })
 
@@ -84,20 +97,6 @@ const botones = document.querySelector('#numeros') as HTMLDivElement  //typeCast
 
 let numeros: number[] =[1,2,3,4,5,6,7,8,9,0]
 
-//tambien se puede haber hecho de esta menra
-
-//podemos añadir a numeros mas elementos de esta manera
-numeros.push(11)
-numeros.push(12)
-
-numeros.concat([12])  //otra manera
-
-numeros=[...numeros,13]  //otra manera  operador spread
-
-console.log(numeros)
-
-console.dir(botones.childNodes)
-
 
 //No es necesario poner Function
 const boton: Function = (num) =>`<div id="btn7"><span>${num}<span></div>`
@@ -106,14 +105,13 @@ numeros.forEach(e =>{
     botones.innerHTML += boton(e)
 })
 
-/*
+
 botones.childNodes.forEach((e) =>{
     console.dir(e)
-    e.addEventListener('click',(e: Event) =>{
-        console.log("click event")
-    })
+    e.addEventListener('click',click)
+    
 })
-*/
+
 
 
 
