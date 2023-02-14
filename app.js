@@ -18,9 +18,8 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-console.log("**log de pruebas con objetos y matrizes**");
-//podemos declarar un objeto de la siguiente manera, hace inferencia de tipos
-//typeScript
+console.log("**log de pruebas tipado dinamino-Any**");
+//podemos declarar objetos de forma dinamica que admitan cualquier tipo
 var salidaTexto = '';
 var entradaTexto = {
     valorTexto: '',
@@ -30,10 +29,10 @@ var entradaTexto = {
 //Podemos declarar las propiedades explicitamente con sus tipos
 var entrada;
 //y luego podemos definirlo asi
-entrada = { valorTexto: '', tecla: '', codigoTecla: 0 };
+entrada = { valorTexto: undefined, tecla: 444, codigoTecla: 0 };
 //podemos modificar las propiedades de esta manera
 //la tradicional
-entrada.valorTexto = "andres";
+entrada.valorTexto = null;
 //utilizando la sintaxis expread
 entrada = __assign(__assign({}, entrada), { tecla: 's' });
 console.log(entrada);

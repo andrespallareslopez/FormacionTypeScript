@@ -1,11 +1,10 @@
 
 
-console.log("**log de pruebas con objetos y matrizes**")    
+console.log("**log de pruebas tipado dinamino-Any**")    
 
-//podemos declarar un objeto de la siguiente manera, hace inferencia de tipos
-//typeScript
+//podemos declarar objetos de forma dinamica que admitan cualquier tipo
 
-let salidaTexto: string = ''
+let salidaTexto: any = ''
 
 
 
@@ -19,18 +18,18 @@ let entradaTexto = {
 //Podemos declarar las propiedades explicitamente con sus tipos
 
 let entrada : {
-     valorTexto: string,
-     tecla:string,
-     codigoTecla:number
+     valorTexto: any,
+     tecla: any,
+     codigoTecla: any
 }
 
 //y luego podemos definirlo asi
-entrada={valorTexto:'',tecla:'',codigoTecla:0}
+entrada={valorTexto:undefined,tecla:444,codigoTecla:0}
 
 
 //podemos modificar las propiedades de esta manera
 //la tradicional
-entrada.valorTexto="andres"
+entrada.valorTexto=null
 
 //utilizando la sintaxis expread
 entrada={...entrada,tecla:'s'}
