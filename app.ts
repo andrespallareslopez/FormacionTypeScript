@@ -24,7 +24,7 @@ console.log(multiplicarCalc(5,5))
 //tipos definidos por el usuario que se van a utilizar en clases y otras estructuras
 
 
-
+//Firma de funciones
 //definimos la firma de una funcion la instruccion type
 type operador = (a:number,b:number) => number
 
