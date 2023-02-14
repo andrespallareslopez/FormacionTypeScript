@@ -216,7 +216,6 @@ ___
 
 Tipado dinamico (any)
 
-https://www.youtube.com/watch?v=nm9P2vnS9_I&list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI&index=6
 
 ~~~
 
