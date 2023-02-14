@@ -1,36 +1,31 @@
 //Operador Type, tiene un uso similar a interface
-//podemos definir los eventos del DOM asi como una funcion para luego pasarlo como 
-//parametro asi
-var change = function (e) {
-    console.log(e);
+var inputValue = { mensaje: '', tecla: '', codigoTecla: 0 };
+var logger = function (errorText) {
+    return errorText || "no disponible";
 };
-var click = function (e) {
-    console.log("click Event");
+console.log(logger());
+console.log(logger("error"));
+console.log(logger(undefined));
+//******************************************** */
+var circulo = function (r) {
+    return (3.14) * Math.pow(r, 2);
 };
-var layout = document.querySelector('#entrada'); //operador de asercion nula, esta expresion no va a ser nula
-var input = document.querySelector('#txtnumero');
-input.onchange = function (e) {
-    //entrada.valorTexto = input.value
-    //console.log(entrada)
+console.log(circulo(2));
+var cuadrado = function (l) {
+    return l * l;
 };
-input.addEventListener('change', change);
-input.addEventListener('keydown', function (e) {
-    //console.dir(e.target)
-    //entrada.tecla=e.key 
-    //entrada={...entrada,codigoTecla:e.keyCode}
-    //console.log(e.key)
-    //console.log(entrada)
-});
-//console.log("layout")
-//console.log(layout.children)
-var botones = document.querySelector('#numeros'); //typeCasting
-var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-//No es necesario poner Function
-var boton = function (num) { return "<div id=\"btn7\"><span>".concat(num, "<span></div>"); };
-numeros.forEach(function (e) {
-    botones.innerHTML += boton(e);
-});
-botones.childNodes.forEach(function (e) {
-    console.dir(e);
-    e.addEventListener('click', click);
-});
+console.log(cuadrado(2));
+var calcularArea = function (fn) {
+    return function (l) { return fn(l); };
+};
+console.log(calcularArea(circulo)(2));
+console.log(calcularArea(cuadrado)(2));
+var circ = calcularArea(circulo);
+console.log(circ(2));
+var cuadr = calcularArea(cuadrado);
+console.log(cuadr(2));
+/*
+let logger = function (errorText?: string | undefined ){
+     return errorText || "no disponible"
+}
+*/

@@ -1,70 +1,68 @@
 
 //Operador Type, tiene un uso similar a interface
 
-
-
-
-
-//podemos definir los eventos del DOM asi como una funcion para luego pasarlo como 
-//parametro asi
-let change=(e: Event) =>{
-   console.log(e)
+type entrada ={
+    mensaje:string,
+    tecla:string,
+    codigoTecla:number
 
 }
-let click=(e: Event) =>{
-   console.log("click Event") 
+
+let inputValue: entrada = {mensaje:'',tecla:'',codigoTecla:0}
+
+//************************* */
+type mensajeError = string | undefined
+
+let logger = function (errorText?: string | undefined ){
+    return errorText || "no disponible"
 }
 
 
-const layout = document.querySelector('#entrada')!   //operador de asercion nula, esta expresion no va a ser nula
+console.log(logger())
+console.log(logger("error"))
+console.log(logger(undefined))
 
 
-let input = document.querySelector('#txtnumero') as HTMLInputElement
-
-
-
-input.onchange= (e: Event) =>{
-     
-     //entrada.valorTexto = input.value
-     //console.log(entrada)
-
+//******************************************** */
+let circulo=(r:number): number =>{
+    return (3.14)*Math.pow(r,2)
 }
-input.addEventListener('change',change)
+
+console.log(circulo(2))
+
+let cuadrado= (l:number):number =>{
+    return l*l
+}
+
+console.log(cuadrado(2))
 
 
-input.addEventListener('keydown' , (e: KeyboardEvent) =>{
-    //console.dir(e.target)
-    //entrada.tecla=e.key 
-    //entrada={...entrada,codigoTecla:e.keyCode}
-    //console.log(e.key)
-    //console.log(entrada)
+//el operador type se puede complicar bastante y dar
+//muchas opciones
 
-})
+//Compilando mas el type con typeof
+type calculoArea = typeof cuadrado | typeof circulo
 
-
-//console.log("layout")
-//console.log(layout.children)
-
-const botones = document.querySelector('#numeros') as HTMLDivElement  //typeCasting
-
-let numeros: number[] =[1,2,3,4,5,6,7,8,9,0]
-
-
-//No es necesario poner Function
-const boton: Function = (num) =>`<div id="btn7"><span>${num}<span></div>`
-
-numeros.forEach(e =>{
-    botones.innerHTML += boton(e)
-})
-
-
-botones.childNodes.forEach((e) =>{
-    console.dir(e)
-    e.addEventListener('click',click)
-
-})
+let calcularArea =(fn: calculoArea) =>{
+    return (l:number):number => fn(l)
+}
 
 
 
+console.log(calcularArea(circulo)(2))
+console.log(calcularArea(cuadrado)(2))
+
+let circ = calcularArea(circulo)
+console.log(circ(2))
+
+let cuadr = calcularArea(cuadrado)
+console.log(cuadr(2))
+
+
+/*
+let logger = function (errorText?: string | undefined ){
+     return errorText || "no disponible"
+}
+*/
 
 
