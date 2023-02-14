@@ -320,12 +320,6 @@ ___
 ### Funciones Firma de funciones ###
 
 
-
- Funciones, call signature (firma de funciones)
-
- https://apuntes.de/typescript/call-signature/#gsc.tab=0
-
-
 ~~~
 
 //estamos definiendo dos parametros con sus tipos, fijaros que estamos definiendo un tipo por los dos puntos ':'
@@ -407,9 +401,6 @@ $app.innerHTML += Avatar({id:5,name: "Manuela"})
 ___
 
 The DOM & Type Casting
-
-https://www.youtube.com/watch?v=hcuKd-Q_tP8&list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI&index=11
-
 
 
 ~~~
