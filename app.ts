@@ -2,17 +2,9 @@
 
 
 
-console.log("**log de pruebas compilando typescript**")    
+console.log("**log de pruebas typecasting con typescript**")    
 
-let mensaje="prueba typescript con tipado debil o inferencia implicita"   //tipo cadena que lo esta infiriendo implicitamente
-
-
-mensaje="hola"    //si intentamos poner un numero le ponemos numero nos va a dar error
-
+const mensaje="prueba javascript"
 
 console.log(mensaje)
-
-
-
-
 
