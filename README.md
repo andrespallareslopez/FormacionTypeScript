@@ -22,6 +22,8 @@
 ___
 ### Introduccion y configuracion ###
 
+- Sale a la luz en el 2012 de la mano de microsoft
+
 - Alternativa a javascript (superconjunto) es javascript + nuevas caracteristicas de lenguajes como java ,c#,c++,go,etc se puede poner codigo javascript normal en un archivo .ts y compilara el mismo codigo javascript
 
 - Nos permite usar tipado fuerte
@@ -45,6 +47,18 @@ npm install -g typescript
 
 instalar pluggin live server en visual studio code
 
+Se utiliza typescript bastante en:
+
+- Aplicaciones moviles (React Native,ionic)
+- Para Programacion Web
+- proyectos angular
+- proyectos React js
+- projectos Vue js
+- Crear Rest Api con Node y Deno
+- Aplicaciones de escritorio utilizando Electron js
+- liberias y frameworks bajo Node.js, en la parte del back-end como Nest.js un ORM bajo typescript
+- Deno que del mismo creador que node , utiliza Typescript por defecto, su lenguaje por defecto es typescript
+- 
 
 ___
 
