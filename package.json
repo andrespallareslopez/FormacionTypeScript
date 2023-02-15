@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devserver" :  "live-server --port=8083 --browser=chrome"
+    "devserver": "live-server --port=8083 --browser=chrome"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/andrespallareslopez/FormacionTypeScript/issues"
   },
-  "homepage": "https://github.com/andrespallareslopez/FormacionTypeScript#readme"
+  "homepage": "https://github.com/andrespallareslopez/FormacionTypeScript#readme",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.0"
+  }
 }
