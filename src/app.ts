@@ -1,36 +1,11 @@
 /// <reference types="jquery" />
 
 //import  $ from 'jquery' 
-import { Producto } from "./clases/Producto.js"  //Tenemos que poner explicitamente Producto.js, la extension js hay que ponerla
+import { Producto } from "./clases/Producto.js"  
 import {v4} from 'uuid'
 
 
-//Porque es lo que va a ejecutar en el directorio public, como traslada el transpilador tsc tal cual, pues
-//lo ponemos asi
 
-
-//podemos instalar una libreria llamada uuid con npm i uuid --save para crear valores unicos para 
-//campos de tipo id
-//Adicionalmente a esta libreia uuid tenemos que instalar npm i --save-dev @types/uuid
-
-
-
-
-//tenemos que crear con el omando tsc --init
-//y luego en module cambiar a es2015
-//luego nos tenemos que ir al fichero index.html
-//y añadir un atributo al script , quedando de la siguiente manera
-//<script type="module" src='app.js' ></script>
-//tenemos que definir dentro del tsconfig.js los siguiente parametros:
-//rootDir:'./src'
-//outDir:'./public'
-
-
-
-
-
-//console.dir($)
-//console.dir($)
 const output = document.querySelector('pre') as HTMLPreElement  
 
 //output.innerHTML=Producto1.toString()
