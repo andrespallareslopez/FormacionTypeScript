@@ -1,3 +1,8 @@
+//Arrancar con tsc app.ts
+
+
+
+
 
 //crear clases
 
