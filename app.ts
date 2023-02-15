@@ -95,6 +95,49 @@ numeros.concat([12])  //otra manera
 
 numeros=[...numeros,13]  //otra manera  operador spread
 
+//filtrar elementos de un array
+
+numeros=numeros.filter(e => e % 2)
+
+//Eliminar elementos de un array
+numeros.splice(6,1)
+
+//Otra forma de eliminar elementos
+numeros=numeros.filter(e => e!=11)
+//podemos generar una funcion como la siguiente
+
+//como un metodo de extension de array pero tenemos que definir
+//una interfaz con genericidad
+
+interface Array<T> {
+    remove(e:T): Array<T>
+}
+
+Array.prototype.remove = function(e: any) {
+   return this.splice(this.indexOf(e), 1);
+}
+
+numeros.remove(7)
+
+
+//utilizando el operador spread en es6
+const eliminar = function(arr,item){
+    var index = arr.indexOf(item);
+    return [
+        //con la sintaxis expread 
+        // parte de la array antes del elemento dado
+        ...arr.slice(0, index),
+ 
+        // parte de la array después del elemento dado
+        ...arr.slice(index + 1)
+    ];
+}
+
+numeros=eliminar(numeros,9)
+
+
+
+
 console.log(numeros)
 
 console.dir(botones.childNodes)

@@ -67,6 +67,22 @@ numeros.push(11);
 numeros.push(12);
 numeros.concat([12]); //otra manera
 numeros = __spreadArray(__spreadArray([], numeros, true), [13], false); //otra manera  operador spread
+//filtrar elementos de un array
+numeros = numeros.filter(function (e) { return e % 2; });
+//Eliminar elementos de un array
+numeros.splice(6, 1);
+//Otra forma de eliminar elementos
+numeros = numeros.filter(function (e) { return e != 11; });
+Array.prototype.remove = function (e) {
+    return this.splice(this.indexOf(e), 1);
+};
+numeros.remove(7);
+//utilizando el operador spread en es6
+var eliminar = function (arr, item) {
+    var index = arr.indexOf(item);
+    return __spreadArray(__spreadArray([], arr.slice(0, index), true), arr.slice(index + 1), true);
+};
+numeros = eliminar(numeros, 9);
 console.log(numeros);
 console.dir(botones.childNodes);
 //No es necesario poner Function
