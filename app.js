@@ -34,6 +34,7 @@ var click = function (e) {
     console.log("click Event");
 };
 var layout = document.querySelector('#entrada'); //operador de asercion nula, esta expresion no va a ser nula
+layout.innerHTML = "";
 var input = document.querySelector('#txtnumero');
 input.onchange = function (e) {
     //entrada.valorTexto = input.value

@@ -66,6 +66,7 @@ let click=(e: Event) =>{
 
 const layout = document.querySelector('#entrada')!   //operador de asercion nula, esta expresion no va a ser nula
 
+layout.innerHTML=""
 
 let input = document.querySelector('#txtnumero') as HTMLInputElement
 
