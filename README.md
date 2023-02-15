@@ -64,8 +64,6 @@ ___
 
 ### Compilando typescript ###
 
-
-
 crear index.html
 crear style.css
 crear fichero prueba.ts
