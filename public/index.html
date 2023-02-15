@@ -4,170 +4,132 @@
        Calculadora01
      </title>
      <style>
-        #calc01{
-        	width: 200px;
-        	height: 300px;
-        	/*
-        	border-width: 1px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    */
-        }
-        #entrada{
-        	width: 100%;
-        	height: 20%;
-        	/*
-            border-width: 1px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    */
-        }
-        #numeros{
-        	width: 100%;
-        	height: 80%;
-            border-width: 1px;
-       	    border-color: black;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
-       	    margin-top:3%;
-       	    padding-top:3%;
-        }
-        #btn7,#btn8,#btn9,#btn4,#btn5,#btn6,#btn1,#btn2,#btn3,#btnpunto{
-        	float: left;
-            width: 30.0%;
-            height: 17%;
-            border-width: 1px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    margin: 1%; 
-       	    text-align: center;
-       	    font-size: 2.0em;
-       	    font-weight: bold;
-       	    background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%);
-
-       	    /*
-       	    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
-       	    */
-       	    color:white;
-       	    /*padding-top: 5%;*/
-        }
-        #btn0{
-        	float: left;
-            width: 63.0%;
-            height: 17%;
-            border-width: 1px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    margin: 1%;
-       	    text-align: center;
-       	    font-size: 2.0em; 
-       	    font-weight: bold;
-       	    background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%);
-       	    /*
-       	    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
-       	    */
-       	    color:white;
-        }
-        #btncero{
-            float: left;
-            width: 63.0%;
-            height: 17%;
-            border-width: 1px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    margin: 1%;
-       	    text-align: center;
-       	    font-size: 2.0em; 
-       	    font-weight: bold;
-            background: linear-gradient(to bottom, #499bea 0%,#207ce5 100%);
-       	    color:white;
-        }
-        #btnborrar{
-            float: left;
-            width: 30.0%;
-            height: 17%;
-            border-width: 1px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-radius: 5px;
-       	    margin: 1%; 
-       	    text-align: center;
-       	    font-size: 2.0em;
-       	    font-weight: bold;
-       	    background: url('del.png'), linear-gradient(to bottom, #ff1a00 0%,#ff1a00 100%);
-       	    background-size: 100%;
-       	    background-repeat: no-repeat;
-
-
-       	    /*
-       	    background-image: url('del.png'), linear-gradient(to bottom, #ff1a00 0%,#ff1a00 100%);
-       	    */ 
-        }
-        #cajasuperior{
-            float: left;
-            width: 85%;
-            height: 45%;
-            /*border-width: 1px;*/
-            border-top-width: 1px;
-            border-left-width: 1px;
-            border-right-width: 0px;
-            border-bottom-width: 1px;
-
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-top-left-radius: 5px;
-       	    /*border-top-right-radius: 5px;*/
-       	    background: linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); 
-        }
-        #imgclose{
-        	float: left;
-            width: 14.0%;
-            height: 45%;
-            /*border-width: 1px;*/
-            border-top-width: 1px;
-            border-left-width: 0px;
-            border-right-width: 1px;
-            border-bottom-width: 1px;
-
-       	    border-color: silver;
-       	    border-style:solid;
-       	    /*border-top-left-radius: 5px;*/
-       	    border-top-right-radius: 5px;
-       	    background:url('close.png'), linear-gradient(to bottom, #ffa84c 0%,#ff7b0d 100%); 
-       	    background-size: 100%;
-       	    background-repeat: no-repeat;
-        }
-        #cajatexto{
-        	float: left;
-            width: 100%;
-            height: 55%;
-            border-width: 0px;
-       	    border-color: silver;
-       	    border-style:solid;
-       	    border-bottom-right-radius: 5px;
-       	    border-bottom-left-radius: 5px;
-        }
-        #txtnumero{
-        	width: 100%;
-        	font-size: 1.2em; 
-
-        }
-		
+   #contenedor{
+         width: 300px;
+         height: 200px;
+      }
+      #ticket{
+        width: 100%;
+        height: auto;
+      /*}
+      table#ticket{*/
+        padding: 15px;
+        border:1px solid silver;
+        border-radius:5px;
+        border-spacing: 0px; 
+        /*font-family: Helvetica,arial;*/
+        
+      }
+      #ticket tr:first-child th:first-child{
+        border-radius:10px 0px 0px 0px;
+      }
+      #ticket tr:first-child th:last-child{
+        border-radius:0px 10px 0px 0px;
+      }
+      #ticket tr:last-child td:first-child{
+        border-radius:0px 0px 0px 10px;
+      }
+      #ticket tr:last-child td:last-child{
+        border-radius:0px 0px 10px 0px;
+      }
+      
+      #ticket tr[class='dato']:nth-child(even){
+        background-color:silver;
+      }
+      
+      #cabezera th{
+        padding: 10px;
+        background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+        border:1px solid silver;
+        color:white;
+      }
+      #pie td{
+        padding: 10px;
+        background: linear-gradient(to bottom, #0e0e0e 0%,#7d7e7d 100%); 
+        border:1px solid silver;
+        color:white;
+      }
+      .celda{
+        border:1px dotted black;
+        
+      }
+      /*
+      table#ticket tr[id='cabezera'] th,table#ticket tr[id='pie'] td{
+        background-color: silver;
+      }
+      */
+      .dato{
+        background-color: white;
+      }
+      .zebra{
+        background-color: silver;
+      }
+      table#ticket tr[class='dato'] td:first-child{
+        border-left: 2px solid silver;
+      }
+      table#ticket tr[class='dato'] td:last-child{
+        border-right: 2px solid silver;
+      }
+      table#ticket tr[class='dato zebra']:hover,table#ticket tr[class='dato']:hover {
+        background-color: yellow;
+      }
+      /*
+      table#ticket tr[class='dato'] td{
+         border-top: 1px solid silver;
+      }
+      */    
      </style>
+	 
   </head>
   <body>
-	<pre>
+	
+	<div id='contenedor'>
+		<table id='ticket'>
+			<tr id='cabezera'>
+			   <th>Producto</th>
+			   <th>cnt</th>
+			   <th>Precio</th>
+			   <th>Total</th>
+			   <th>Borrar</th>
+			   <th>Editar</th>
+			</tr>
+			<tr class='dato'>
+			   <td>Fanta</td>
+			   <td>1</td>
+			   <td>2.5</td>
+			   <td>2.5</td>
+			   <td><button class='btnborrar'>del</button></td>
+			   <td><button class='btneditar'>edit</button></td>
+			</tr>
+			 <tr class='dato'>
+			   <td>Fanta</td>
+			   <td>1</td>
+			   <td>2.5</td>
+			   <td>2.5</td>
+			   <td><button class='btnborrar'>del</button></td>
+			   <td><button class='btnedit'>edit</button></td>
+			</tr>
+			<tr class='dato'>
+			   <td>Fanta</td>
+			   <td>1</td>
+			   <td>2.5</td>
+			   <td>2.5</td>
+			   <td><button class='btnborrar'>del</button></td>
+			   <td><button class='btnedit'>edit</button></td>
+			</tr>
+			<tr id='pie'>
+			   <td colspan='5'>Total:</td>
+			   <td><button id='btnañadir'>nuevo</button></td>
+			</tr>
+		</table>
+	</div>
+  <pre>
 		hola
 	</pre>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="module" src="app.js" ></script>
 	
-    <script type="module" src="app.js" ></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js' ></script>
+	
   </body>
 </html>
 
