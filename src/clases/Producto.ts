@@ -1,5 +1,7 @@
+import { IFormatString } from "../interfaces/IFormatString"
 
-export class Producto {
+
+export class Producto implements IFormatString {
     Nombre:string
     cnt: number
     Precio: number
@@ -17,6 +19,9 @@ export class Producto {
     }
     log(){
      console.log(`Nombre: ${this.Nombre} cnt:${this.cnt} Precio:${this.Precio} Total:${this.Total}`)
+    }
+    format(): string {
+      return `Descripcion ${this.Nombre} Cantidad:${this.cnt} Precio:${this.Precio}`
     }
     
  }

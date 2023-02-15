@@ -1,133 +1,50 @@
 <html>
   <head>
      <title>
-       Calculadora01
+       Formulario
      </title>
      <style>
-   #contenedor{
-         width: 300px;
-         height: 200px;
-      }
-      #ticket{
-        width: 100%;
-        height: auto;
-      /*}
-      table#ticket{*/
-        padding: 15px;
-        border:1px solid silver;
-        border-radius:5px;
-        border-spacing: 0px; 
-        /*font-family: Helvetica,arial;*/
-        
-      }
-      #ticket tr:first-child th:first-child{
-        border-radius:10px 0px 0px 0px;
-      }
-      #ticket tr:first-child th:last-child{
-        border-radius:0px 10px 0px 0px;
-      }
-      #ticket tr:last-child td:first-child{
-        border-radius:0px 0px 0px 10px;
-      }
-      #ticket tr:last-child td:last-child{
-        border-radius:0px 0px 10px 0px;
-      }
-      
-      #ticket tr[class='dato']:nth-child(even){
-        background-color:silver;
-      }
-      
-      #cabezera th{
-        padding: 10px;
-        background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
-        border:1px solid silver;
-        color:white;
-      }
-      #pie td{
-        padding: 10px;
-        background: linear-gradient(to bottom, #0e0e0e 0%,#7d7e7d 100%); 
-        border:1px solid silver;
-        color:white;
-      }
-      .celda{
-        border:1px dotted black;
-        
-      }
-      /*
-      table#ticket tr[id='cabezera'] th,table#ticket tr[id='pie'] td{
-        background-color: silver;
-      }
-      */
-      .dato{
-        background-color: white;
-      }
-      .zebra{
-        background-color: silver;
-      }
-      table#ticket tr[class='dato'] td:first-child{
-        border-left: 2px solid silver;
-      }
-      table#ticket tr[class='dato'] td:last-child{
-        border-right: 2px solid silver;
-      }
-      table#ticket tr[class='dato zebra']:hover,table#ticket tr[class='dato']:hover {
-        background-color: yellow;
-      }
-      /*
-      table#ticket tr[class='dato'] td{
-         border-top: 1px solid silver;
-      }
-      */    
+     
      </style>
-	 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">	 
   </head>
   <body>
+	<div class="container">
+        <!-- Content here -->
+        <h5 class="card-title">Introducir Articulos</h5>
+        <div class="card">
+            <div class="card-body">
+            <form class="row ">
+                <div class="col" >
+                
+                <input type="text" class="form-control" placeholder="nombre" id="Descripcion" >
+                </div>
+                <div class="col">
+            
+                <input type="number" class="form-control" placeholder="cantidad" id="Cantidad">
+                </div>
+                <div class="col" >
+                
+                    <input type="number" class="form-control" placeholder="Precio" id="Precio">
+                </div>
+                <div class="col">
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            </div>
+          </div>
+
+          <h5 class="card-title">Lista de Articulos</h5>
+          <ul class="list-group"></ul>
+        </div>
+    </div>
+   
 	
-	<div id='contenedor'>
-		<table id='ticket'>
-			<tr id='cabezera'>
-			   <th>Producto</th>
-			   <th>cnt</th>
-			   <th>Precio</th>
-			   <th>Total</th>
-			   <th>Borrar</th>
-			   <th>Editar</th>
-			</tr>
-			<tr class='dato'>
-			   <td>Fanta</td>
-			   <td>1</td>
-			   <td>2.5</td>
-			   <td>2.5</td>
-			   <td><button class='btnborrar'>del</button></td>
-			   <td><button class='btneditar'>edit</button></td>
-			</tr>
-			 <tr class='dato'>
-			   <td>Fanta</td>
-			   <td>1</td>
-			   <td>2.5</td>
-			   <td>2.5</td>
-			   <td><button class='btnborrar'>del</button></td>
-			   <td><button class='btnedit'>edit</button></td>
-			</tr>
-			<tr class='dato'>
-			   <td>Fanta</td>
-			   <td>1</td>
-			   <td>2.5</td>
-			   <td>2.5</td>
-			   <td><button class='btnborrar'>del</button></td>
-			   <td><button class='btnedit'>edit</button></td>
-			</tr>
-			<tr id='pie'>
-			   <td colspan='5'>Total:</td>
-			   <td><button id='btnañadir'>nuevo</button></td>
-			</tr>
-		</table>
-	</div>
-  <pre>
-		hola
-	</pre>
+    <pre></pre>	
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script type="module" src="app.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="app.js" ></script>
 	
 	
   </body>
