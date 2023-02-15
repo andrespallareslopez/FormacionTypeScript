@@ -94,6 +94,92 @@ const output = document.querySelector('pre') as HTMLPreElement
 
 output.innerHTML= JSON.stringify(Productos,null,2)
 
+//podemos definir un ambio public,private,protected readonly a las clases si creamos un nueva clase
 
+class Articulo {
+   public Id:number
+   public Descripcion: string
+   public Precio:number
+   private fecha:Date
+
+   public constructor(i:number,d:string,p:number,f:Date){
+      this.Id=i
+      this.Descripcion=d
+      this.Precio=p
+      this.fecha=f
+   }
+  
+   public getFecha():Date {
+       return this.fecha
+   }
+}
+
+let mercancia = new Articulo(1,'chocolate',3.00,new Date)
+
+console.log(mercancia.getFecha())
+
+
+//Typescript tiene tambien  getter and setter
+
+class Genero{
+    private _id:number
+    private _descripcion:string
+    private _precio:number
+
+    public get Id(){
+      return this._id
+    }
+
+    public set Id(i:number){
+      this._id=i
+    }
+    
+    public get Descripcion(){
+      return this._descripcion
+    }
+    public set Descripcion(d:string){
+       this._descripcion=d
+    }
+     
+    public get Precio(){
+       return this._precio
+    }
+    public set Precio(p:number){
+      this._precio = p
+    }    
+    
+    
+     
+}
+
+
+//Tambien tenemos herencia un ejemplo
+
+class Persona {
+    nombre:string
+    apellidos:string
+    age:number
+    constructor(n:string,a:string,age:number){
+      this.nombre=n
+      this.apellidos=a
+
+      this.age=age
+    }
+
+}
+
+class empleado extends Persona{
+   NumEmpleado:number
+   
+   constructor(n:string,a:string,age:number,ne:number){
+      super(n,a,age)
+      this.NumEmpleado=ne
+      
+   }
+}
+
+let emp=new empleado('andres','pallares',52,1554443)
+
+console.log(emp.nombre,emp.NumEmpleado)
 
 
