@@ -83,6 +83,20 @@ input.addEventListener('keydown' , (e: KeyboardEvent) =>{
 
 const botones = document.querySelector('#numeros') as HTMLDivElement  //typeCasting
 
+
+
+let tupla: (string | number)[] =[]
+
+let arr: Array<string | number> = []
+
+arr.push(4)
+arr.push('mario')
+
+
+tupla.push('andres')
+tupla.push(4)
+
+
 let numeros: number[] =[1,2,3,4,5,6,7,8,9,0]
 
 //tambien se puede haber hecho de esta menra
